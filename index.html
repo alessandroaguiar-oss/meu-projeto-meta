@@ -1301,7 +1301,7 @@
 <script>
 const SHEET_ID   = '10qizRUGrKVSBxM8zBLQFSdnVSlYI56ktEmLnSniFP6Q'; // removido — agora fica no servidor
 
-// ── Aba CONSULTA — a partir de B6 (índice 0 = col B) ──
+// ── Aba CONSULTA META — a partir de B6 (índice 0 = col B) ──
 // [0]=DATA [1]=COD [2]=DESC [3]=QTD [4]=VALOR_UNIT
 // [5]=NF [6]=MOTIVO [7]=VALOR_TOTAL [8]=CARGA
 // [9]=MOTORISTA [10]=vazio [11]=RESP [12]=TRATATIVA [13]=MOTORISTA2
@@ -1309,7 +1309,7 @@ const SHEET_FA = 'CONSULTA META';
 const RANGE_FA = 'B6:P';
 const CF = { DATA:0, CODIGO:1, DESCRICAO:2, QTD:3, VALOR:7, CARGA:8, MOTIVO:6, MOTORISTA:9, RESP:11, TRATATIVA:12 };
 
-// ── Aba CONSULTA SOBRA ──
+// ── Aba CONSULTA SOBRA META ──
 const SHEET_S = 'CONSULTA SOBRA META';
 const RANGE_S = 'D3:Q';
 const CS = { CODIGO:0, DESCRICAO:1, QTD:3, CARGA:5, MOTORISTA:7, DATA:8, VALOR:13 };
@@ -1355,7 +1355,7 @@ let _originalHtmlSource = document.documentElement.outerHTML;
 
 window.addEventListener('DOMContentLoaded', () => {
   document.getElementById('api-key').value     = '*** protegida ***';
-  document.getElementById('range-input').value = 'CONSULTA B6:O | SOBRA D3:Q';
+  document.getElementById('range-input').value = 'CONSULTA META B6:O | SOBRA D3:Q';
 
   // Calcula datas dinamicamente
   const range = calcDateRange();
@@ -1511,8 +1511,8 @@ async function loadData() {
     _lastLoadTime = Date.now();
     console.log(`✓ FA: ${rowsFA.length} linhas | S: ${rowsS.length} linhas`);
     if (rowsFA.length === 0) {
-      toast('⚠️ Aba CONSULTA vazia — verifique o intervalo de datas na planilha', 'err');
-      document.getElementById('state-area').innerHTML=`<div class="state"><div class="state-icon">⚠️</div><h3>Sem dados</h3><p>A aba CONSULTA está vazia. Verifique o intervalo de datas configurado na planilha.</p></div>`;
+      toast('⚠️ Aba CONSULTA META vazia — verifique o intervalo de datas na planilha', 'err');
+      document.getElementById('state-area').innerHTML=`<div class="state"><div class="state-icon">⚠️</div><h3>Sem dados</h3><p>A aba CONSULTA META está vazia. Verifique o intervalo de datas configurado na planilha.</p></div>`;
       document.getElementById('btn-load').disabled=false;
       return;
     }
@@ -1570,7 +1570,7 @@ function processRows(rowsFA, rowsS) {
   const respNorm   = FALTA_RESP_FILTRO.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
   const divergNorm = FALTA_DIVERG_FILTRO.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
 
-  // ── Processa CONSULTA (faltas e avarias) ──
+  // ── Processa CONSULTA META (faltas e avarias) ──
   for (const row of rowsFA) {
     const data      = String(row[CF.DATA]      ?? '').trim();
     const carga     = String(row[CF.CARGA]     ?? '').trim();
@@ -1602,7 +1602,7 @@ function processRows(rowsFA, rowsS) {
     }
   }
 
-  // ── Processa CONSULTA SOBRA ──
+  // ── Processa CONSULTA SOBRA META ──
   // Sobras usam a mesma chave (carga + data) para unir com FA quando existir
   for (const row of rowsS) {
     const data      = String(row[CS.DATA]      ?? '').trim();
