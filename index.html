@@ -18,7 +18,7 @@
     --red:     #e03050;
     --green:   #0cb880;
     --orange:  #e07820;
-    --text:    #0d2a40;
+    --text:    #053807;
     --text2:   #3a6880;
     --muted:   #6a9ab0;
     --mono: 'DM Mono', monospace;
@@ -30,7 +30,7 @@
 
   /* ══ HERO ══ */
   .hero {
-    background: #0d2a40;
+    background: #053807;
     border-bottom:2px solid #0a1e2e;
     padding:0 0; display:flex; align-items:stretch;
     justify-content:space-between; min-height:88px;
@@ -44,7 +44,7 @@
     width:200px; height:88px;
     display:grid; place-items:center; flex-shrink:0;
     overflow:hidden;
-    background: #0d2a40;
+    background: #053807;
     border-radius:0;
   }
   .hero-mark img {
@@ -106,7 +106,7 @@
   /* ══ CONFIG BAR ══ */
   .config-bar {
     display:flex; gap:16px; flex-wrap:wrap; align-items:flex-end;
-    padding:14px 40px; background:#0d2a40; border-bottom:1px solid #0a1e2e;
+    padding:14px 40px; background:#053807; border-bottom:1px solid #0a1e2e;
   }
   .fg { display:flex; flex-direction:column; gap:5px; }
   .fg label {
@@ -159,7 +159,7 @@
   .motor-combo.open .motor-combo-arrow { transform:translateY(-50%) rotate(180deg); }
   .motor-dropdown {
     display:none; position:absolute; top:calc(100% + 4px); left:0; right:0;
-    background:#0d2a40; border:1px solid rgba(56,216,192,.4);
+    background:#053807; border:1px solid rgba(56,216,192,.4);
     border-radius:7px; z-index:999; max-height:220px; overflow-y:auto;
     box-shadow:0 8px 28px rgba(0,0,0,.4);
   }
@@ -248,7 +248,7 @@
   }
   .rank-chart-wrap {
     display:none;
-    background: linear-gradient(160deg, #0d2a40 0%, #0a1e2e 100%);
+    background: linear-gradient(160deg, #053807 0%, #0a1e2e 100%);
     border:1px solid rgba(56,216,192,.2);
     border-radius:12px; padding:14px 16px 12px;
     animation:fadeIn .22s ease;
@@ -282,7 +282,7 @@
   /* ══ FILTER BAR ══ */
   .filter-bar {
     display:flex; gap:12px; flex-wrap:wrap; align-items:flex-end;
-    padding:14px 40px; border-bottom:1px solid #0a1e2e; background:#0d2a40;
+    padding:14px 40px; border-bottom:1px solid #0a1e2e; background:#053807;
   }
 
 
@@ -306,8 +306,8 @@
     z-index: 2;
     pointer-events: none;
   }
-  .hero-marquee-wrap::before { left:0;  background: linear-gradient(90deg, #0d2a40, transparent); }
-  .hero-marquee-wrap::after  { right:0; background: linear-gradient(270deg, #0d2a40, transparent); }
+  .hero-marquee-wrap::before { left:0;  background: linear-gradient(90deg, #053807, transparent); }
+  .hero-marquee-wrap::after  { right:0; background: linear-gradient(270deg, #053807, transparent); }
   .hero-marquee-label {
     font-family: var(--mono);
     font-size: 9px;
@@ -343,7 +343,7 @@
   .t-sub  { color: #38d8c0; font-size: 21px; font-weight: 700; }
 
   /* ══ SECTION HEADER ══ */
-  .sec-hd { padding:0 40px; margin:24px 0 0; display:flex; align-items:center; gap:14px; background:#0d2a40; border-radius:8px; min-height:42px; }
+  .sec-hd { padding:0 40px; margin:24px 0 0; display:flex; align-items:center; gap:14px; background:#053807; border-radius:8px; min-height:42px; }
   .sec-hd-label {
     font-family:var(--cond); font-size:11px; font-weight:700;
     text-transform:uppercase; letter-spacing:.14em; color:rgba(255,255,255,.75); white-space:nowrap;
@@ -411,7 +411,7 @@
   .table-wrap { padding:0 40px 50px; overflow-x:auto; }
   table { width:100%; border-collapse:separate; border-spacing:0; }
   thead th {
-    background:#0d2a40; border-top:1px solid #0a1e2e;
+    background:#053807; border-top:1px solid #0a1e2e;
     border-bottom:1px solid var(--border2); padding:11px 16px; text-align:left;
     font-family:var(--cond); font-size:11px; font-weight:600;
     text-transform:uppercase; letter-spacing:.12em; color:rgba(255,255,255,.65); white-space:nowrap;
@@ -428,7 +428,7 @@
   /* linha de detalhe (expandida) */
   tbody tr.detail-row td {
     padding:0; border-bottom:2px solid #0a1e30;
-    background: #0d2a40;
+    background: #053807;
   }
   .detail-inner {
     padding:4px 20px 20px;
@@ -772,7 +772,7 @@
   /* ══ LOGIN SCREEN ══ */
   #login-screen {
     position:fixed; inset:0; z-index:9999;
-    background: linear-gradient(135deg, #071624 0%, #0d2a40 60%, #0a1e2e 100%);
+    background: linear-gradient(135deg, #071624 0%, #053807 60%, #0a1e2e 100%);
     display:flex; align-items:center; justify-content:center;
   }
   #login-screen.hidden { display:none; }
@@ -822,7 +822,7 @@
   /* ══ USER MANAGEMENT ══ */
   #mgmt-screen {
     position:fixed; inset:0; z-index:9998;
-    background:linear-gradient(135deg,#071624 0%,#0d2a40 100%);
+    background:linear-gradient(135deg,#071624 0%,#053807 100%);
     display:none; align-items:center; justify-content:center;
     overflow-y:auto; padding:32px 16px;
   }
@@ -1191,7 +1191,7 @@
         <button onclick="closeMotoristasPanel()" style="background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.15); color:rgba(255,255,255,.7); border-radius:8px; padding:8px 18px; cursor:pointer; font-family:var(--mono); font-size:11px; transition:all .15s;" onmouseover="this.style.background='rgba(255,255,255,.18)'" onmouseout="this.style.background='rgba(255,255,255,.08)'">✕ Fechar</button>
       </div>
     </div>
-    <div style="background:#0d2a40; border:1px solid rgba(255,255,255,.08); border-radius:12px; overflow:hidden;">
+    <div style="background:#053807; border:1px solid rgba(255,255,255,.08); border-radius:12px; overflow:hidden;">
       <table id="mot-table" style="width:100%; border-collapse:collapse;">
         <thead>
           <tr>
@@ -1233,7 +1233,7 @@
         <div style="font-family:var(--mono); font-size:9px; text-transform:uppercase; letter-spacing:.08em; color:rgba(224,96,112,.6); margin-bottom:10px; padding:4px 8px; background:rgba(224,48,80,.08); border-left:2px solid rgba(224,48,80,.3); border-radius:0 4px 4px 0;">
           ↳ Baixa direcionada ao CC do Transporte
         </div>
-        <div style="background:#0d2a40; border:1px solid rgba(224,48,80,.2); border-radius:10px; overflow:hidden;">
+        <div style="background:#053807; border:1px solid rgba(224,48,80,.2); border-radius:10px; overflow:hidden;">
           <table style="width:100%; border-collapse:collapse;">
             <thead>
               <tr>
@@ -1256,7 +1256,7 @@
         <div style="font-family:var(--mono); font-size:9px; text-transform:uppercase; letter-spacing:.08em; color:rgba(224,160,96,.6); margin-bottom:10px; padding:4px 8px; background:rgba(224,120,32,.08); border-left:2px solid rgba(224,120,32,.3); border-radius:0 4px 4px 0;">
           ↳ Baixa direcionada ao CC do Transporte
         </div>
-        <div style="background:#0d2a40; border:1px solid rgba(224,120,32,.2); border-radius:10px; overflow:hidden;">
+        <div style="background:#053807; border:1px solid rgba(224,120,32,.2); border-radius:10px; overflow:hidden;">
           <table style="width:100%; border-collapse:collapse;">
             <thead>
               <tr>
@@ -1279,7 +1279,7 @@
         <div style="font-family:var(--mono); font-size:9px; text-transform:uppercase; letter-spacing:.08em; color:rgba(167,139,250,.6); margin-bottom:10px; padding:4px 8px; background:rgba(139,92,246,.08); border-left:2px solid rgba(139,92,246,.3); border-radius:0 4px 4px 0;">
           ↳ Baixa direcionada ao CC da Logística
         </div>
-        <div style="background:#0d2a40; border:1px solid rgba(139,92,246,.2); border-radius:10px; overflow:hidden;">
+        <div style="background:#053807; border:1px solid rgba(139,92,246,.2); border-radius:10px; overflow:hidden;">
           <table style="width:100%; border-collapse:collapse;">
             <thead>
               <tr>
@@ -2556,7 +2556,7 @@ function printMotoristasTable() {
     tbody tr:last-child { border-bottom:none; }
     tbody tr:nth-child(even) { background:#f5f9fd; }
     tbody td { padding:9px 12px; font-size:13px; vertical-align:middle; }
-    .mot-td-name { font-family:'Inter', sans-serif; font-weight:600; color:#0d2a40; }
+    .mot-td-name { font-family:'Inter', sans-serif; font-weight:600; color:#053807; }
     .mot-td-val  { font-family:'DM Mono', monospace; font-size:12px; font-weight:700; text-align:right; white-space:nowrap; }
     .mot-td-f    { color:#c02040; }
     .mot-td-a    { color:#b05010; }
